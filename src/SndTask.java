@@ -19,5 +19,7 @@ public class SndTask {
         }
         System.out.println(result);
         System.out.println(1/(2*3.14*1550*2.2*0.000001));
+
+//        int[][] my = {};
     }
 }
