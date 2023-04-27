@@ -20,5 +20,6 @@ public class ArrayListEg {
         my_arrlist.set(1,"yoe");
         System.out.println(my_arrlist);
 //        System.out.println(my_arrlist.contains("Myo"));
+
     }
 }
