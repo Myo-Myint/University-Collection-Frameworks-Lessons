@@ -7,26 +7,53 @@ public class CreateFile {
     public static void main(String[] args)   {
         try {
 
-            File myfile = new File("My file.txt");
-            myfile.createNewFile();
-            myfile.setReadable(true);
 
-           //writing
-            FileWriter writer = new FileWriter("My file.txt");
-            writer.write("Yes I just created a file !");
-            writer.close();
-            System.out.println("Successfully written.");
+            File foldermkder = new File("My Folder");
+            boolean boo1 = foldermkder.mkdir();
+            if (boo1) {
+                System.out.println("Folder created: " + foldermkder.getName());
+            } else {
+                System.out.println("Folder exits");
+            }
+            System.out.println("__________________________________");
 
 
+            //files creation
 
-            //read
-            Scanner reader = new Scanner(myfile);
-            while (reader.hasNext()){
-                System.out.print(reader.nextLine());
+            for (int i = 0; i < 20; i++) {
+                File myfile = new File("My folder/My file" + i + ".txt");
+                myfile.createNewFile();
+                myfile.setReadable(true);
             }
 
-            //deletion
-//            if (myfile.delete()) {
+            //writing
+            for (int i = 0; i < 20; i++) {
+                FileWriter writer = new FileWriter("My folder/My file" + i + ".txt");
+                writer.write("Yes I just created  file no." + i);
+                writer.close();
+            }
+
+
+            File[] files_list = foldermkder.listFiles();
+            for (File file: files_list) {
+                Scanner reader = new Scanner(file);
+                while (reader.hasNext()){
+                    System.out.println("The file name called("+file.getName()+")"+"has content: "+reader.nextLine());
+                }
+            }
+
+//            Scanner reader = new Scanner(myfile);
+//            while (reader.hasNext()){
+//                System.out.print(reader.nextLine());
+//            }
+
+//            System.out.println("Successfully written.");
+
+            //read
+
+
+//            deletion
+//            if (myfile.delete() && foldermkder.delete()) {
 //                System.out.println("The deleted file is : " + myfile.getName());
 //            }
 //            else {
