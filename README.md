@@ -14,5 +14,12 @@
 * stack(Last-in-first-out) just like Pringles
   * it extends Vector class and vector extends list
   * push, pop, peek, size
-* tree data structure 
+* tree data structure
 * BFS and DFS 
+* Hashmap and hashset
+  * Hashset is not in order and it does not hold duplicate values 
+  * hashmap has key,value combination(best for data handling)
+* FileHandling
+  * use File class and its method(createNewfile()) to create a file
+  * use Filewriter class to write
+  * use Scanner to read
