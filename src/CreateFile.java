@@ -1,13 +1,12 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class CreateFile {
     public static void main(String[] args)   {
         try {
-
-
             File foldermkder = new File("My Folder");
             boolean boo1 = foldermkder.mkdir();
             if (boo1) {
@@ -21,20 +20,24 @@ public class CreateFile {
             //files creation
 
             for (int i = 0; i < 20; i++) {
-                File myfile = new File("My folder/My file" + i + ".txt");
+                File myfile = new File("My folder/My_file" + i + ".txt");
                 myfile.createNewFile();
                 myfile.setReadable(true);
             }
 
             //writing
             for (int i = 0; i < 20; i++) {
-                FileWriter writer = new FileWriter("My folder/My file" + i + ".txt");
+                FileWriter writer = new FileWriter("My folder/My_file" + i + ".txt");
                 writer.write("Yes I just created  file no." + i);
                 writer.close();
             }
 
 
             File[] files_list = foldermkder.listFiles();
+            LinkedList<File> files_linked_list = new LinkedList<>();
+
+            
+
             for (File file: files_list) {
                 Scanner reader = new Scanner(file);
                 while (reader.hasNext()){
