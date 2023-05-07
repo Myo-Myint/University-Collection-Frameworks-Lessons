@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.LinkedList;
 import java.util.Scanner;
 
 public class CreateFile {
@@ -16,9 +15,7 @@ public class CreateFile {
             }
             System.out.println("__________________________________");
 
-
             //files creation
-
             for (int i = 0; i < 20; i++) {
                 File myfile = new File("My folder/My_file" + i + ".txt");
                 myfile.createNewFile();
@@ -34,9 +31,6 @@ public class CreateFile {
 
 
             File[] files_list = foldermkder.listFiles();
-            LinkedList<File> files_linked_list = new LinkedList<>();
-
-            
 
             for (File file: files_list) {
                 Scanner reader = new Scanner(file);

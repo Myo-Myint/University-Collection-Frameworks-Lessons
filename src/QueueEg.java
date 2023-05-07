@@ -1,16 +1,15 @@
-import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class QueueEg {
     public static void main(String[] args) {
-        Queue<String> myQueue = new LinkedList<>();
-        myQueue.add("Myo");
-        myQueue.add("Thu");
-        myQueue.add("Mint");
-//        System.out.println(myQueue);
-
-        myQueue.remove();
+//        Queue<String> myQueue = new LinkedList<>();
+//        myQueue.add("Myo");
+//        myQueue.add("Thu");
+//        myQueue.add("Mint");
+////        System.out.println(myQueue);
+//
+//        myQueue.remove();
 //        System.out.println(myQueue);
 
 //        System.out.println(myQueue.getClass(0));;
@@ -33,6 +32,8 @@ public class QueueEg {
         my_third_queue.add("223");
         my_third_queue.add("ada");
         my_third_queue.add("Zebra");
+
+
 
         System.out.println(my_third_queue);
         System.out.println(my_third_queue.peek());
